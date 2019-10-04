@@ -1,0 +1,92 @@
+<%response.expires=-1 %>
+<% Response.AddHeader "PRAGMA", "NO-CACHE" %>
+<%response.Charset="ISO-8859-1"%>
+<%
+
+dim op
+operacion = request("op")
+
+if ( operacion = "planesEstudio" ) then
+    Response.Write "{ ""ListaPlanesEstudio"": ["
+        Response.Write(" { ")
+            Response.Write("""idPlan"" : ")
+            Response.Write("""" & "1" & """")
+            Response.Write(" , ")
+            Response.Write("""descripcion"" : ")
+            Response.Write("""" & "Cocinero" & """")
+        Response.Write(" } ")
+        Response.Write(" , ")
+        Response.Write(" { ")
+            Response.Write("""idPlan"" : ")
+            Response.Write("""" & "2" & """")
+            Response.Write(" , ")
+            Response.Write("""descripcion"" : ")
+            Response.Write("""" & "Herrero" & """")
+        Response.Write(" } ")
+        Response.Write(" , ")
+        Response.Write(" { ")
+            Response.Write("""idPlan"" : ")
+            Response.Write("""" & "3" & """")
+            Response.Write(" , ")
+            Response.Write("""descripcion"" : ")
+            Response.Write("""" & "Mecanico de Motos" & """")
+        Response.Write(" } ")
+        Response.Write(" , ")
+        Response.Write(" { ")
+            Response.Write("""idPlan"" : ")
+            Response.Write("""" & "4" & """")
+            Response.Write(" , ")
+            Response.Write("""descripcion"" : ")
+            Response.Write("""" & "Gasista" & """")
+        Response.Write(" } ")
+    Response.Write(" ] } ") ' cierre planesEstudio
+end if
+
+if ( operacion = "alumnos" ) then
+    Response.Write "{ ""ListaAlumnos"": ["
+        Response.Write(" { ")
+            Response.Write("""idAlumno"" : ")
+            Response.Write("""" & "11" & """")
+            Response.Write(" , ")
+            Response.Write("""Apellido"" : ")
+            Response.Write("""" & "Paz" & """")
+            Response.Write(" , ")
+            Response.Write("""Nombre"" : ")
+            Response.Write("""" & "Eduardo" & """")
+        Response.Write(" } ")
+        Response.Write(" , ")
+        Response.Write(" { ")
+            Response.Write("""idAlumno"" : ")
+            Response.Write("""" & "12" & """")
+            Response.Write(" , ")
+            Response.Write("""Apellido"" : ")
+            Response.Write("""" & "Roca" & """")
+            Response.Write(" , ")
+            Response.Write("""Nombre"" : ")
+            Response.Write("""" & "Eduardo" & """")
+        Response.Write(" } ")
+        Response.Write(" , ")
+        Response.Write(" { ")
+            Response.Write("""idAlumno"" : ")
+            Response.Write("""" & "13" & """")
+            Response.Write(" , ")
+            Response.Write("""Apellido"" : ")
+            Response.Write("""" & "Vicente" & """")
+            Response.Write(" , ")
+            Response.Write("""Nombre"" : ")
+            Response.Write("""" & "Francisco" & """")
+        Response.Write(" } ")
+        Response.Write(" , ")
+        Response.Write(" { ")
+            Response.Write("""idAlumno"" : ")
+            Response.Write("""" & "14" & """")
+            Response.Write(" , ")
+            Response.Write("""Apellido"" : ")
+            Response.Write("""" & "Rosales" & """")
+            Response.Write(" , ")
+            Response.Write("""Nombre"" : ")
+            Response.Write("""" & "Gerardo" & """")
+        Response.Write(" } ")
+    Response.Write(" ] } ") ' cierre planesEstudio
+end if
+%>
